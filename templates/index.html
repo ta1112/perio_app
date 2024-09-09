@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perio Check</title>
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<body>
+    <header>   
+        <a class="header-logo" href="#">Perio Check</a>
+    </header>
+
+    <div class="main">    
+        <h2>歯肉の状態を判定します</h2>
+        <p>画像をアップロードしてください</p>
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="submit!" type="submit">
+        </form>
+        <div class="answer">{{answer}}</div>
+    </div>
+
+    <footer>
+        <small>&copy; 2024 tomo.a</small>   
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+header {
+    background-color: #e8bedd;
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.header-logo {
+    color: #050404;
+    font-size: 25px;
+    margin: 15px 25px;
+    position: absolute;
+    left: 0;
+}
+
+.main {
+    height: 370px;
+}
+
+h2 {
+    color: #444444;
+    margin: 90px 0px;
+    text-align: center;
+}
+
+p {
+    color: #444444;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+}
+
+.answer {
+    color: #444444;
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+    font-size: 25px;
+}
+
+form {
+    text-align: center;
+}
+
+footer {
+    background-color: #e8bedd;
+    height: 60px;
+    margin: -8px;
+    position: relative;
+}
+
+small {
+    margin: 15px 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
