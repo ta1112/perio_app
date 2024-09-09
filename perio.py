@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, redirect, render_template, flash
 from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
-import cv2
+from tensorflow.keras.preprocessing import image
 import numpy as np
 
 UPLOAD_FOLDER = "uploads"
@@ -32,9 +32,8 @@ def upload_file():
             filepath = os.path.join(UPLOAD_FOLDER, filename)
 
             #受け取った画像を読み込み、np形式に変換してモデルに渡して予測
-            img = cv2.imread(filepath)
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img = cv2.resize(img, (300, 200))
+            img = image.load_img(filepath)
+            img = img.resize((300, 200))
             pred = model.predict(np.array([img]))[0][0]
             if pred >= 0.5:
                 pred_answer = '炎症の可能性あり。歯科医院を受診しましょう。'
