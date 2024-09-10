@@ -13,7 +13,7 @@ app = Flask(__name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-model = load_model('./perio_model.keras')#学習済みモデルをロード
+model = load_model('./perio_model_2.h5')#学習済みモデルをロード
 
 
 @app.route('/', methods=['GET', 'POST'])
